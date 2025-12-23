@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my data science and machine le
 
 ## 🔗 Live Demo
 
-**Visit the live site:** [https://jack1021ohoh.github.io/portfolio-website/](https://jack1021ohoh.github.io/portfolio-website/)
+**Visit the live site:** [https://jack1021ohoh.github.io/](https://jack1021ohoh.github.io/)
 
 ## 📋 About
 
@@ -43,7 +43,7 @@ This portfolio website highlights my work in data science, machine learning, and
 ## 📁 Project Structure
 
 ```
-portfolio-website/
+jack1021ohoh.github.io/
 ├── index.html          # Main HTML file
 ├── css/
 │   └── styles.css      # All styling and responsive design
@@ -59,12 +59,12 @@ To run this website locally:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Jack1021ohoh/portfolio-website.git
+git clone https://github.com/Jack1021ohoh/jack1021ohoh.github.io.git
 ```
 
 2. Navigate to the project directory:
 ```bash
-cd portfolio-website
+cd jack1021ohoh.github.io
 ```
 
 3. Open `index.html` in your web browser:
