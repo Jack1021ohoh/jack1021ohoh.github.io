@@ -122,7 +122,30 @@
 
             <div class="projects-grid">
 
-                <div class="project-card reveal" data-category="nlp">
+                <div class="project-card reveal" data-category="research">
+                    <div class="project-header">
+                        <span class="project-badge badge-gold">Published &mdash; Elsevier 2026</span>
+                        <span class="project-domain">Federated Learning · Agriculture</span>
+                    </div>
+                    <h3>Orchid Double Spike Prediction with Federated Learning</h3>
+                    <p class="project-description">Privacy-preserving AI system predicting double-spike rates in Phalaenopsis orchids for small-scale farms, enabling collaboration without data sharing.</p>
+                    <ul class="project-highlights">
+                        <li>Devised dual federated learning system merging YOLOv8 and TabNet</li>
+                        <li>Achieved 0.82 prediction AUC, improving small farm accuracy from 0.69 to 0.775 via FL</li>
+                        <li>Published in Engineering Applications of Artificial Intelligence (Elsevier, 2026)</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">Federated Learning</span>
+                        <span class="tag">YOLOv8</span>
+                        <span class="tag">TabNet</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://doi.org/10.1016/j.engappai.2025.113552" target="_blank" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>
+                    </div>
+                </div>
+
+                <div class="project-card reveal" data-category="nlp" style="--delay: 0.08s">
                     <div class="project-header">
                         <span class="project-badge">Production Ready</span>
                         <span class="project-domain">NLP · RAG · Cloud</span>
@@ -146,9 +169,9 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal" data-category="vision" style="--delay: 0.08s">
+                <div class="project-card reveal" data-category="vision" style="--delay: 0.16s">
                     <div class="project-header">
-                        <span class="project-badge">Research</span>
+                        <span class="project-badge">Applied Research</span>
                         <span class="project-domain">Computer Vision · XAI</span>
                     </div>
                     <h3>Deepfake Image Detection with XAI</h3>
@@ -170,30 +193,31 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal" data-category="research" style="--delay: 0.16s">
+                <div class="project-card reveal" data-category="industry">
                     <div class="project-header">
-                        <span class="project-badge badge-gold">Published &mdash; Elsevier 2026</span>
-                        <span class="project-domain">Federated Learning · Agriculture</span>
+                        <span class="project-badge">Applied Research</span>
+                        <span class="project-domain">Time Series · Forecasting</span>
                     </div>
-                    <h3>Orchid Double Spike Prediction with Federated Learning</h3>
-                    <p class="project-description">Privacy-preserving AI system predicting double-spike rates in Phalaenopsis orchids for small-scale farms, enabling collaboration without data sharing.</p>
+                    <h3>Electricity Load Forecasting</h3>
+                    <p class="project-description">End-to-end forecasting pipeline for 156 residential/commercial clients using the UCI LD2011-2014 dataset, covering preprocessing, user clustering, and six models across three complexity levels.</p>
                     <ul class="project-highlights">
-                        <li>Devised dual federated learning system merging YOLOv8 and TabNet</li>
-                        <li>Achieved 0.82 prediction AUC, improving small farm accuracy from 0.69 to 0.775 via FL</li>
-                        <li>Published in Engineering Applications of Artificial Intelligence (Elsevier, 2026)</li>
+                        <li>Benchmarked 6 models across 3 levels: AutoARIMA/AutoETS &rarr; SARIMAX/Prophet &rarr; iTransformer</li>
+                        <li>AutoARIMA achieved best test MAPE of 15.33% with cluster-based disaggregation pipeline</li>
+                        <li>Built Streamlit dashboard with Gemini 2.5 Flash AI agent for natural-language forecasting</li>
                     </ul>
                     <div class="project-tags">
-                        <span class="tag">Federated Learning</span>
-                        <span class="tag">YOLOv8</span>
-                        <span class="tag">TabNet</span>
-                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Time Series</span>
+                        <span class="tag">Forecasting</span>
+                        <span class="tag">statsforecast</span>
+                        <span class="tag">iTransformer</span>
+                        <span class="tag">Streamlit</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://doi.org/10.1016/j.engappai.2025.113552" target="_blank" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>
+                        <a href="https://github.com/Jack1021ohoh/IEOR4578_Electricity_Project" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
 
-                <div class="project-card reveal" data-category="sports">
+                <div class="project-card reveal" data-category="sports" style="--delay: 0.08s">
                     <div class="project-header">
                         <span class="project-badge">Kaggle</span>
                         <span class="project-domain">Sports Analytics · Ensemble</span>
@@ -216,7 +240,7 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal" data-category="sports" style="--delay: 0.08s">
+                <div class="project-card reveal" data-category="sports" style="--delay: 0.16s">
                     <div class="project-header">
                         <span class="project-badge">Analytics</span>
                         <span class="project-domain">Statistical Modeling · GAM</span>
@@ -236,26 +260,6 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Jack1021ohoh/MLB_Position_Player_Aging_Analysis" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-                    </div>
-                </div>
-
-                <div class="project-card reveal" data-category="industry" style="--delay: 0.16s">
-                    <div class="project-header">
-                        <span class="project-badge">Industry</span>
-                        <span class="project-domain">Deep Learning · Clustering</span>
-                    </div>
-                    <h3>Vehicle Telematics Customer Segmentation</h3>
-                    <p class="project-description">Customer segmentation of 48,744 vehicles using LSTM autoencoders and clustering algorithms for targeted marketing strategies.</p>
-                    <ul class="project-highlights">
-                        <li>Developed bidirectional LSTM encoder-decoder for dimensionality reduction (420&rarr;8)</li>
-                        <li>Identified 11 distinct customer segments from V2X GPS telematics data</li>
-                        <li>Real industry partnership project with automotive manufacturer</li>
-                    </ul>
-                    <div class="project-tags">
-                        <span class="tag">Deep Learning</span>
-                        <span class="tag">LSTM</span>
-                        <span class="tag">Clustering</span>
-                        <span class="tag">Big Data</span>
                     </div>
                 </div>
 
@@ -360,6 +364,7 @@
                         <span class="skill-item">Federated Learning</span>
                         <span class="skill-item">RAG Systems</span>
                         <span class="skill-item">MLOps</span>
+                        <span class="skill-item">Time Series</span>
                     </div>
                 </div>
             </div>
