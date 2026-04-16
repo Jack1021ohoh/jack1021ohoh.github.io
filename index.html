@@ -4,39 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Liang-Jie Chiu - Data Science & Machine Learning Portfolio">
-    <title>Liang-Jie Chiu | MS Data Science Student & ML Researcher</title>
+    <title>Liang-Jie Chiu | MS Data Science · Columbia University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-brand">LJC</div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="nav-brand">LJC</div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <canvas id="neural-canvas"></canvas>
+        <div class="hero-vignette"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm <span class="highlight">Liang-Jie Chiu</span></h1>
-            <p class="hero-tagline">MS Data Science Student | ML & AI Researcher</p>
-            <p class="hero-subtitle">Transforming data into actionable insights with AI and deep learning</p>
+            <div class="hero-overline">MS Data Science &nbsp;·&nbsp; Columbia University</div>
+            <h1 class="hero-title">Liang-Jie Chiu</h1>
+            <div class="hero-roles">
+                <span class="hero-role-tag">ML Researcher</span>
+                <span class="hero-role-sep">·</span>
+                <span class="hero-role-tag">Deep Learning</span>
+                <span class="hero-role-sep">·</span>
+                <span class="hero-role-tag">XAI</span>
+            </div>
+            <p class="hero-tagline">Transforming data into actionable insights with AI and deep learning</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#contact" class="btn btn-ghost">Get In Touch</a>
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/liang-jie-chiu" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -45,48 +56,48 @@
             </div>
         </div>
         <div class="hero-scroll">
-            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+            <a href="#about">
+                <span class="scroll-label">SCROLL</span>
+                <div class="scroll-line"><div class="scroll-dot"></div></div>
+            </a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
+            <div class="section-label">01 &mdash; ABOUT</div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h2 class="section-title">About Me</h2>
                     <p class="lead">I'm a Master's student in Data Science at Columbia University with a passion for leveraging AI to solve real-world problems.</p>
-
                     <p>Building on my B.B.A. in Management Information Systems from National Sun Yat-sen University (GPA: 3.97/4.0), I've developed expertise in deep learning, machine learning, data mining, and big data analytics.</p>
-
-                    <p>At Academia Sinica, I applied advanced AI methods in healthcare and agriculture research, working with deep learning frameworks like PyTorch to improve medical imaging analysis and develop innovative solutions for agricultural challenges. These experiences strengthened my technical expertise while honing my skills in problem-solving, communication, and interdisciplinary collaboration.</p>
-
+                    <p>At Academia Sinica, I applied advanced AI methods in healthcare and agriculture research, working with deep learning frameworks like PyTorch to improve medical imaging analysis and develop innovative solutions for agricultural challenges. These experiences strengthened my technical expertise while honing my skills in problem-solving and interdisciplinary collaboration.</p>
                     <p>Beyond research, I'm passionate about sports analytics, especially baseball, where I enjoy uncovering insights from data to support decision-making and strategy.</p>
-
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>Education</h4>
-                                <p>MS in Data Science, Columbia University</p>
-                                <p class="small">BBA in MIS, NSYSU (GPA: 3.97/4.0)</p>
-                            </div>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-item reveal" style="--delay: 0.1s">
+                        <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="highlight-body">
+                            <h4>Education</h4>
+                            <p>MS in Data Science, Columbia University</p>
+                            <p class="small">BBA in MIS, NSYSU &mdash; GPA 3.97/4.0</p>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-briefcase"></i>
-                            <div>
-                                <h4>Experience</h4>
-                                <p>Research Assistant, Academia Sinica</p>
-                                <p class="small">Healthcare & Agriculture AI Research</p>
-                            </div>
+                    </div>
+                    <div class="highlight-item reveal" style="--delay: 0.2s">
+                        <div class="highlight-icon"><i class="fas fa-flask"></i></div>
+                        <div class="highlight-body">
+                            <h4>Experience</h4>
+                            <p>Research Assistant, Academia Sinica</p>
+                            <p class="small">Healthcare &amp; Agriculture AI Research</p>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-chart-line"></i>
-                            <div>
-                                <h4>Interests</h4>
-                                <p>Deep Learning, XAI, MLOps</p>
-                                <p class="small">Sports Analytics & Data Visualization</p>
-                            </div>
+                    </div>
+                    <div class="highlight-item reveal" style="--delay: 0.3s">
+                        <div class="highlight-icon"><i class="fas fa-atom"></i></div>
+                        <div class="highlight-body">
+                            <h4>Interests</h4>
+                            <p>Deep Learning, XAI, MLOps</p>
+                            <p class="small">Sports Analytics &amp; Data Visualization</p>
                         </div>
                     </div>
                 </div>
@@ -97,15 +108,24 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Showcase of my machine learning and data science work</p>
+            <div class="section-label">02 &mdash; PROJECTS</div>
+            <h2 class="section-title reveal">Featured Projects</h2>
+            <p class="section-subtitle reveal">Showcase of my machine learning and data science work</p>
+
+            <div class="project-legend reveal">
+                <span class="legend-item" data-cat="nlp"><span class="legend-dot"></span>NLP / RAG</span>
+                <span class="legend-item" data-cat="vision"><span class="legend-dot"></span>Computer Vision</span>
+                <span class="legend-item" data-cat="research"><span class="legend-dot"></span>Published Research</span>
+                <span class="legend-item" data-cat="sports"><span class="legend-dot"></span>Sports Analytics</span>
+                <span class="legend-item" data-cat="industry"><span class="legend-dot"></span>Industry</span>
+            </div>
 
             <div class="projects-grid">
-                <!-- Project 1: Explainable AI for News Integrity -->
-                <div class="project-card">
+
+                <div class="project-card reveal" data-category="nlp">
                     <div class="project-header">
-                        <i class="fas fa-newspaper project-icon"></i>
                         <span class="project-badge">Production Ready</span>
+                        <span class="project-domain">NLP · RAG · Cloud</span>
                     </div>
                     <h3>Explainable AI for News Integrity</h3>
                     <p class="project-description">A production-ready fact-checking system using a 5-stage pipeline that analyzes news articles to detect misinformation with transparent, evidence-backed verdicts.</p>
@@ -126,11 +146,10 @@
                     </div>
                 </div>
 
-                <!-- Project 2: XAI in Deepfake Detection -->
-                <div class="project-card">
+                <div class="project-card reveal" data-category="vision" style="--delay: 0.08s">
                     <div class="project-header">
-                        <i class="fas fa-eye project-icon"></i>
                         <span class="project-badge">Research</span>
+                        <span class="project-domain">Computer Vision · XAI</span>
                     </div>
                     <h3>Deepfake Image Detection with XAI</h3>
                     <p class="project-description">Advanced computer vision system detecting deepfake images using CNNs and Vision Transformers with integrated Explainable AI for forensic analysis.</p>
@@ -151,36 +170,33 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Orchid Double Spike Prediction -->
-                <div class="project-card">
+                <div class="project-card reveal" data-category="research" style="--delay: 0.16s">
                     <div class="project-header">
-                        <i class="fas fa-seedling project-icon"></i>
-                        <span class="project-badge">Published Research</span>
+                        <span class="project-badge badge-gold">Published &mdash; Elsevier 2026</span>
+                        <span class="project-domain">Federated Learning · Agriculture</span>
                     </div>
                     <h3>Orchid Double Spike Prediction with Federated Learning</h3>
-                    <p class="project-description">Privacy-preserving AI system predicting double-spike rates in Phalaenopsis orchids for small-scale farms, enabling collaboration without data sharing while optimizing export quality.</p>
+                    <p class="project-description">Privacy-preserving AI system predicting double-spike rates in Phalaenopsis orchids for small-scale farms, enabling collaboration without data sharing.</p>
                     <ul class="project-highlights">
-                        <li>Devised dual federated learning system merging YOLOv8 and TabNet for non-invasive yield prediction</li>
-                        <li>Achieved 0.82 prediction AUC, improving small farm model accuracy from 0.69 to 0.775 via FL</li>
+                        <li>Devised dual federated learning system merging YOLOv8 and TabNet</li>
+                        <li>Achieved 0.82 prediction AUC, improving small farm accuracy from 0.69 to 0.775 via FL</li>
                         <li>Published in Engineering Applications of Artificial Intelligence (Elsevier, 2026)</li>
                     </ul>
                     <div class="project-tags">
                         <span class="tag">Federated Learning</span>
                         <span class="tag">YOLOv8</span>
                         <span class="tag">TabNet</span>
-                        <span class="tag">Precision Agriculture</span>
                         <span class="tag">Computer Vision</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://doi.org/10.1016/j.engappai.2025.113552" target="_blank" class="project-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                        <a href="https://doi.org/10.1016/j.engappai.2025.113552" target="_blank" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>
                     </div>
                 </div>
 
-                <!-- Project 4: MLB Hit Prediction -->
-                <div class="project-card">
+                <div class="project-card reveal" data-category="sports">
                     <div class="project-header">
-                        <i class="fas fa-baseball-ball project-icon"></i>
                         <span class="project-badge">Kaggle</span>
+                        <span class="project-domain">Sports Analytics · Ensemble</span>
                     </div>
                     <h3>MLB Hit Prediction with Swing Data</h3>
                     <p class="project-description">Predictive modeling system for MLB hit outcomes using advanced ensemble methods and deep learning on 50,000+ swing records.</p>
@@ -200,16 +216,15 @@
                     </div>
                 </div>
 
-                <!-- Project 5: MLB Player Aging Analysis -->
-                <div class="project-card">
+                <div class="project-card reveal" data-category="sports" style="--delay: 0.08s">
                     <div class="project-header">
-                        <i class="fas fa-chart-line project-icon"></i>
                         <span class="project-badge">Analytics</span>
+                        <span class="project-domain">Statistical Modeling · GAM</span>
                     </div>
                     <h3>MLB Position Player Aging Analysis</h3>
                     <p class="project-description">Statistical analysis of MLB player performance decline using Generalized Additive Models to predict aging curves across key metrics.</p>
                     <ul class="project-highlights">
-                        <li>Analyzed 16,625 player-seasons spanning 1980-2024</li>
+                        <li>Analyzed 16,625 player-seasons spanning 1980&ndash;2024</li>
                         <li>Applied GAM with tensor product splines for multi-feature interactions</li>
                         <li>Provided actionable insights for player evaluation and team strategy</li>
                     </ul>
@@ -224,16 +239,15 @@
                     </div>
                 </div>
 
-                <!-- Project 6: Business Big Data Analytics -->
-                <div class="project-card">
+                <div class="project-card reveal" data-category="industry" style="--delay: 0.16s">
                     <div class="project-header">
-                        <i class="fas fa-car project-icon"></i>
                         <span class="project-badge">Industry</span>
+                        <span class="project-domain">Deep Learning · Clustering</span>
                     </div>
                     <h3>Vehicle Telematics Customer Segmentation</h3>
-                    <p class="project-description">Customer segmentation analysis of 48,744 vehicles using LSTM autoencoders and clustering algorithms for targeted marketing strategies.</p>
+                    <p class="project-description">Customer segmentation of 48,744 vehicles using LSTM autoencoders and clustering algorithms for targeted marketing strategies.</p>
                     <ul class="project-highlights">
-                        <li>Developed bidirectional LSTM encoder-decoder for dimensionality reduction (420→8)</li>
+                        <li>Developed bidirectional LSTM encoder-decoder for dimensionality reduction (420&rarr;8)</li>
                         <li>Identified 11 distinct customer segments from V2X GPS telematics data</li>
                         <li>Real industry partnership project with automotive manufacturer</li>
                     </ul>
@@ -244,6 +258,7 @@
                         <span class="tag">Big Data</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -251,11 +266,12 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <p class="section-subtitle">Tools and technologies I work with</p>
+            <div class="section-label">03 &mdash; SKILLS</div>
+            <h2 class="section-title reveal">Technical Skills</h2>
+            <p class="section-subtitle reveal">Tools and technologies I work with</p>
 
             <div class="skills-grid">
-                <div class="skill-category">
+                <div class="skill-category reveal">
                     <div class="skill-category-header">
                         <i class="fas fa-code"></i>
                         <h3>Programming Languages</h3>
@@ -271,10 +287,10 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category reveal" style="--delay: 0.05s">
                     <div class="skill-category-header">
                         <i class="fas fa-brain"></i>
-                        <h3>Machine Learning & AI</h3>
+                        <h3>Machine Learning &amp; AI</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-item">PyTorch</span>
@@ -288,10 +304,10 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category reveal" style="--delay: 0.1s">
                     <div class="skill-category-header">
                         <i class="fas fa-database"></i>
-                        <h3>Data Engineering & Big Data</h3>
+                        <h3>Data Engineering &amp; Big Data</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-item">Apache Spark</span>
@@ -304,10 +320,10 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category reveal" style="--delay: 0.15s">
                     <div class="skill-category-header">
                         <i class="fas fa-cloud"></i>
-                        <h3>Cloud & DevOps</h3>
+                        <h3>Cloud &amp; DevOps</h3>
                     </div>
                     <div class="skill-items">
                         <span class="skill-item">Google Cloud Platform</span>
@@ -318,7 +334,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category reveal" style="--delay: 0.2s">
                     <div class="skill-category-header">
                         <i class="fas fa-chart-bar"></i>
                         <h3>Data Visualization</h3>
@@ -332,7 +348,7 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category reveal" style="--delay: 0.25s">
                     <div class="skill-category-header">
                         <i class="fas fa-project-diagram"></i>
                         <h3>Specialized Areas</h3>
@@ -353,11 +369,12 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">I'm always open to collaboration, knowledge-sharing, or discussing the latest trends in data science</p>
+            <div class="section-label">04 &mdash; CONTACT</div>
+            <h2 class="section-title reveal">Get In Touch</h2>
+            <p class="section-subtitle reveal">Open to collaboration, knowledge-sharing, and discussing the latest trends in data science</p>
 
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info reveal">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
@@ -388,18 +405,22 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contact-form">
+                <form class="contact-form reveal" id="contact-form" style="--delay: 0.15s">
                     <div class="form-group">
+                        <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                     <div id="form-status"></div>
@@ -411,11 +432,14 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Liang-Jie Chiu. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/liang-jie-chiu" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Jack1021ohoh" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:lc4021@columbia.edu"><i class="fas fa-envelope"></i></a>
+            <div class="footer-inner">
+                <span class="footer-name">Liang-Jie Chiu</span>
+                <span class="footer-copy">&copy; <span id="footer-year"></span> &mdash; All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/liang-jie-chiu" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Jack1021ohoh" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:lc4021@columbia.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
         </div>
     </footer>
