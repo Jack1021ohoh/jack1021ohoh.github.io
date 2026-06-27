@@ -223,17 +223,17 @@
                         <span class="project-domain">Sports Analytics · Ensemble</span>
                     </div>
                     <h3>MLB Hit Prediction with Swing Data</h3>
-                    <p class="project-description">Predictive modeling system for MLB hit outcomes using advanced ensemble methods and deep learning on 50,000+ swing records.</p>
+                    <p class="project-description">Predictive modeling system classifying 5 MLB hit outcomes from raw pitch and swing biomechanics across 50,000+ swing records using a two-level stacking ensemble.</p>
                     <ul class="project-highlights">
-                        <li>Developed ensemble of DNN, LightGBM, and CatBoost models achieving 0.74 AUC</li>
-                        <li>Implemented automatic hyperparameter optimization with Optuna</li>
-                        <li>Conducted feature importance analysis with SHAP explanations</li>
+                        <li>Built two-level stacking ensemble of CatBoost and DNN base learners with a logistic regression meta-model, achieving 0.74 AUC</li>
+                        <li>Implemented automatic hyperparameter optimization with Optuna (TPE sampling)</li>
+                        <li>Derived physics-informed features (Magnus effect, swing efficiency) and cross-validated importance via CatBoost and LightGBM</li>
                     </ul>
                     <div class="project-tags">
                         <span class="tag">Sports Analytics</span>
                         <span class="tag">Ensemble Learning</span>
-                        <span class="tag">XGBoost</span>
-                        <span class="tag">SHAP</span>
+                        <span class="tag">CatBoost</span>
+                        <span class="tag">Optuna</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Jack1021ohoh/MLB_Hit_Prediction" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
@@ -242,24 +242,24 @@
 
                 <div class="project-card reveal" data-category="sports" style="--delay: 0.16s">
                     <div class="project-header">
-                        <span class="project-badge">Analytics</span>
-                        <span class="project-domain">Statistical Modeling · GAM</span>
+                        <span class="project-badge">Applied Research</span>
+                        <span class="project-domain">Deep Learning · Sports Analytics</span>
                     </div>
-                    <h3>MLB Position Player Aging Analysis</h3>
-                    <p class="project-description">Statistical analysis of MLB player performance decline using Generalized Additive Models to predict aging curves across key metrics.</p>
+                    <h3>MLB Pitch Outcome Prediction &amp; Sequence Optimization</h3>
+                    <p class="project-description">Two-phase system for pitch-level modeling on MLB Statcast data: a multi-task transformer predicts pitch outcomes, then drives a Monte Carlo Tree Search sequencer that recommends optimal pitch selection.</p>
                     <ul class="project-highlights">
-                        <li>Analyzed 16,625 player-seasons spanning 1980&ndash;2024</li>
-                        <li>Applied GAM with tensor product splines for multi-feature interactions</li>
-                        <li>Provided actionable insights for player evaluation and team strategy</li>
+                        <li>Designed dual-encoder transformer fusing batter sequences and hierarchical pitcher appearances via cross-attention to predict outcomes, hit locations, and batted-ball physics</li>
+                        <li>Surpassed LightGBM baseline on 2025 Statcast test data (top-4 recall 0.963 vs. 0.958, log-loss 1.048 vs. 1.114)</li>
+                        <li>Engineered expectimax MCTS sequencer using the transformer as simulator with RE288 run-expectancy rewards to rank optimal pitch-zone actions</li>
                     </ul>
                     <div class="project-tags">
-                        <span class="tag">Statistical Modeling</span>
-                        <span class="tag">GAM</span>
+                        <span class="tag">Transformer</span>
+                        <span class="tag">MCTS</span>
+                        <span class="tag">PyTorch</span>
                         <span class="tag">Sports Analytics</span>
-                        <span class="tag">Python</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Jack1021ohoh/MLB_Position_Player_Aging_Analysis" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://github.com/Jack1021ohoh/Pitch_Sequence_Optimization" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
 
