@@ -20,6 +20,7 @@
     --blue:       #5b8ef5;
     --green:      #34d399;
     --rose:       #fb7185;
+    --violet:     #a78bfa;
 
     /* Borders */
     --border:       rgba(255, 255, 255, 0.06);
@@ -56,6 +57,11 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
 ul { list-style: none; }
 
 .container {
@@ -67,13 +73,14 @@ ul { list-style: none; }
 /* ========================================
    Reveal animations
    ======================================== */
-.reveal {
+/* Scoped to .js (set inline in <head>) so content stays visible without JavaScript. */
+.js .reveal {
     opacity: 0;
     transform: translateY(28px);
     transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
     transition-delay: var(--delay, 0s);
 }
-.reveal.visible {
+.js .reveal.visible {
     opacity: 1;
     transform: none;
 }
@@ -147,6 +154,11 @@ ul { list-style: none; }
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    position: relative;
+    z-index: 1;
+    padding: 6px 0;
+    background: none;
+    border: 0;
 }
 
 .hamburger span {
@@ -386,6 +398,7 @@ section { padding: 7rem 0; }
     font-size: 1rem;
     color: var(--text-muted);
     margin-bottom: 3.5rem;
+    max-width: 62ch;
 }
 
 /* ========================================
@@ -515,9 +528,9 @@ section { padding: 7rem 0; }
 
 .legend-item[data-cat="nlp"] .legend-dot     { background: var(--accent); }
 .legend-item[data-cat="vision"] .legend-dot  { background: var(--blue); }
-.legend-item[data-cat="research"] .legend-dot{ background: var(--green); }
+.legend-item[data-cat="research"] .legend-dot{ background: var(--violet); }
 .legend-item[data-cat="sports"] .legend-dot  { background: var(--amber); }
-.legend-item[data-cat="industry"] .legend-dot{ background: var(--rose); }
+.legend-item[data-cat="timeseries"] .legend-dot{ background: var(--rose); }
 
 /* Project grid */
 .projects-grid {
@@ -558,9 +571,9 @@ section { padding: 7rem 0; }
 
 .project-card[data-category="nlp"]     { --card-accent: var(--accent); }
 .project-card[data-category="vision"]  { --card-accent: var(--blue); }
-.project-card[data-category="research"]{ --card-accent: var(--green); }
+.project-card[data-category="research"]{ --card-accent: var(--violet); }
 .project-card[data-category="sports"]  { --card-accent: var(--amber); }
-.project-card[data-category="industry"]{ --card-accent: var(--rose); }
+.project-card[data-category="timeseries"]{ --card-accent: var(--rose); }
 
 .project-header {
     display: flex;
@@ -1001,10 +1014,15 @@ section { padding: 7rem 0; }
         align-items: center;
         justify-content: center;
         gap: 2.5rem;
-        transition: left 0.4s var(--ease);
+        visibility: hidden;
+        transition: left 0.4s var(--ease), visibility 0s linear 0.4s;
     }
 
-    .nav-menu.active { left: 0; }
+    .nav-menu.active {
+        left: 0;
+        visibility: visible;
+        transition: left 0.4s var(--ease);
+    }
 
     .nav-link {
         font-size: 0.9rem;
@@ -1023,4 +1041,24 @@ section { padding: 7rem 0; }
     section { padding: 4.5rem 0; }
     .hero-title { font-size: 3.2rem; }
     .container { padding: 0 1.25rem; }
+}
+
+/* ========================================
+   Reduced motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+    }
+
+    .js .reveal {
+        opacity: 1;
+        transform: none;
+    }
 }

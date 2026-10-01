@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Liang-Jie Chiu - Data Science & Machine Learning Portfolio">
     <title>Liang-Jie Chiu | MS Data Science · Columbia University</title>
+    <script>document.documentElement.classList.add('js');</script>
+    <meta name="theme-color" content="#07070e">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jack1021ohoh.github.io/">
+    <meta property="og:title" content="Liang-Jie Chiu | MS Data Science · Columbia University">
+    <meta property="og:description" content="Machine learning projects in healthcare, agriculture, NLP, computer vision and baseball analytics.">
+    <meta property="og:image" content="https://jack1021ohoh.github.io/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -23,11 +34,11 @@
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-        <div class="hamburger" id="hamburger">
+        <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </nav>
 
     <!-- Hero Section -->
@@ -38,13 +49,13 @@
             <div class="hero-overline">MS Data Science &nbsp;·&nbsp; Columbia University</div>
             <h1 class="hero-title">Liang-Jie Chiu</h1>
             <div class="hero-roles">
+                <span class="hero-role-tag">Data Scientist</span>
+                <span class="hero-role-sep">·</span>
                 <span class="hero-role-tag">ML Researcher</span>
                 <span class="hero-role-sep">·</span>
-                <span class="hero-role-tag">Deep Learning</span>
-                <span class="hero-role-sep">·</span>
-                <span class="hero-role-tag">XAI</span>
+                <span class="hero-role-tag">Baseball Analytics</span>
             </div>
-            <p class="hero-tagline">Transforming data into actionable insights with AI and deep learning</p>
+            <p class="hero-tagline">I build machine learning for healthcare, finance and baseball &mdash; and test whether it actually works.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-ghost">Get In Touch</a>
@@ -66,11 +77,11 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-label">01 &mdash; ABOUT</div>
+            <div class="section-label">ABOUT</div>
             <div class="about-grid">
                 <div class="about-text reveal">
                     <h2 class="section-title">About Me</h2>
-                    <p class="lead">I'm a Master's student in Data Science at Columbia University with a passion for leveraging AI to solve real-world problems.</p>
+                    <p class="lead">I'm a Master's student in Data Science at Columbia University, graduating in December 2026. I like machine learning problems where the hard part is knowing whether the answer is right.</p>
                     <p>Building on my B.B.A. in Management Information Systems from National Sun Yat-sen University (GPA: 3.97/4.0), I've developed expertise in deep learning, machine learning, data mining, and big data analytics.</p>
                     <p>Most recently, as an AI/ML research intern at ASTA Health Tech, I built vital-sign forecasting with calibrated uncertainty bands, distilled a medical QA model into a smaller Qwen3-14B student, and read ECG waveforms from photos of patient monitors. Before that, I built LLM agents at TIFIN that ground financial explanations in live API data, and spent a year at Academia Sinica applying deep learning and federated learning to medical imaging and agriculture.</p>
                     <p>Beyond research, I'm passionate about sports analytics, especially baseball, where I enjoy uncovering insights from data to support decision-making and strategy.</p>
@@ -100,8 +111,8 @@
                         <div class="highlight-icon"><i class="fas fa-atom"></i></div>
                         <div class="highlight-body">
                             <h4>Interests</h4>
-                            <p>Deep Learning, XAI, MLOps</p>
-                            <p class="small">Sports Analytics &amp; Data Visualization</p>
+                            <p>Healthcare AI, LLM Systems, Baseball Analytics</p>
+                            <p class="small">Model evaluation &amp; uncertainty quantification</p>
                         </div>
                     </div>
                 </div>
@@ -112,16 +123,16 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <div class="section-label">02 &mdash; PROJECTS</div>
+            <div class="section-label">PROJECTS</div>
             <h2 class="section-title reveal">Featured Projects</h2>
-            <p class="section-subtitle reveal">Showcase of my machine learning and data science work</p>
+            <p class="section-subtitle reveal">From a published federated-learning paper to MLB pitch sequencing &mdash; what I built and how it measured up</p>
 
             <div class="project-legend reveal">
                 <span class="legend-item" data-cat="nlp"><span class="legend-dot"></span>NLP / RAG</span>
                 <span class="legend-item" data-cat="vision"><span class="legend-dot"></span>Computer Vision</span>
                 <span class="legend-item" data-cat="research"><span class="legend-dot"></span>Published Research</span>
                 <span class="legend-item" data-cat="sports"><span class="legend-dot"></span>Sports Analytics</span>
-                <span class="legend-item" data-cat="industry"><span class="legend-dot"></span>Industry</span>
+                <span class="legend-item" data-cat="timeseries"><span class="legend-dot"></span>Time Series</span>
             </div>
 
             <div class="projects-grid">
@@ -197,7 +208,7 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal" data-category="industry">
+                <div class="project-card reveal" data-category="timeseries">
                     <div class="project-header">
                         <span class="project-badge">Applied Research</span>
                         <span class="project-domain">Time Series · Forecasting</span>
@@ -274,7 +285,7 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <div class="section-label">03 &mdash; SKILLS</div>
+            <div class="section-label">SKILLS</div>
             <h2 class="section-title reveal">Technical Skills</h2>
             <p class="section-subtitle reveal">Tools and technologies I work with</p>
 
@@ -306,9 +317,13 @@
                         <span class="skill-item">Scikit-learn</span>
                         <span class="skill-item">Keras</span>
                         <span class="skill-item">Transformers</span>
+                        <span class="skill-item">PEFT/LoRA</span>
+                        <span class="skill-item">OpenAI SDK</span>
                         <span class="skill-item">XGBoost</span>
                         <span class="skill-item">LightGBM</span>
                         <span class="skill-item">SHAP</span>
+                        <span class="skill-item">statsmodels</span>
+                        <span class="skill-item">pyGAM</span>
                     </div>
                 </div>
 
@@ -320,6 +335,7 @@
                     <div class="skill-items">
                         <span class="skill-item">Apache Spark</span>
                         <span class="skill-item">Hadoop</span>
+                        <span class="skill-item">BigQuery</span>
                         <span class="skill-item">Airflow</span>
                         <span class="skill-item">Pandas</span>
                         <span class="skill-item">Polars</span>
@@ -378,9 +394,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-label">04 &mdash; CONTACT</div>
+            <div class="section-label">CONTACT</div>
             <h2 class="section-title reveal">Get In Touch</h2>
-            <p class="section-subtitle reveal">Open to collaboration, knowledge-sharing, and discussing the latest trends in data science</p>
+            <p class="section-subtitle reveal">I'm looking for full-time data science and ML roles after I graduate in December 2026, including in baseball operations. Email is the fastest way to reach me.</p>
 
             <div class="contact-content">
                 <div class="contact-info reveal">

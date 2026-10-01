@@ -1,3 +1,6 @@
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+
 // ========================================
 // Neural Network Canvas
 // ========================================
@@ -29,6 +32,9 @@
             });
         }
     }
+
+    let running = false;
+    let heroVisible = true;
 
     function draw() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -79,14 +85,36 @@
             ctx.fill();
         });
 
-        requestAnimationFrame(draw);
+        if (running) requestAnimationFrame(draw);
+    }
+
+    // Animate only while the hero is on screen and the tab is visible;
+    // with reduced motion, draw a single still frame.
+    function updateRunning() {
+        const shouldRun = !prefersReducedMotion && heroVisible && !document.hidden;
+        if (shouldRun && !running) {
+            running = true;
+            requestAnimationFrame(draw);
+        } else if (!shouldRun) {
+            running = false;
+        }
     }
 
     resize();
     createParticles();
     draw();
 
-    window.addEventListener('resize', () => { resize(); createParticles(); });
+    new IntersectionObserver(([entry]) => {
+        heroVisible = entry.isIntersecting;
+        updateRunning();
+    }).observe(canvas);
+    document.addEventListener('visibilitychange', updateRunning);
+
+    window.addEventListener('resize', () => {
+        resize();
+        createParticles();
+        if (!running) draw();
+    });
     window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
 }());
 
@@ -99,23 +127,29 @@ const navMenu   = document.getElementById('nav-menu');
 const navbar    = document.getElementById('navbar');
 const navLinks  = document.querySelectorAll('.nav-link');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+function setMenuOpen(open) {
+    navMenu.classList.toggle('active', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     const spans = hamburger.querySelectorAll('span');
-    const open  = navMenu.classList.contains('active');
     spans[0].style.transform  = open ? 'rotate(45deg) translate(5px, 6px)'   : '';
     spans[1].style.opacity    = open ? '0'                                    : '1';
     spans[2].style.transform  = open ? 'rotate(-45deg) translate(5px, -6px)' : '';
+}
+
+hamburger.addEventListener('click', () => {
+    setMenuOpen(!navMenu.classList.contains('active'));
 });
 
 navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.querySelectorAll('span').forEach(s => {
-            s.style.transform = '';
-            s.style.opacity   = '1';
-        });
-    });
+    link.addEventListener('click', () => setMenuOpen(false));
+});
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        setMenuOpen(false);
+        hamburger.focus();
+    }
 });
 
 window.addEventListener('scroll', () => {
@@ -131,7 +165,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (!target) return;
         e.preventDefault();
-        window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+        window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        });
     });
 });
 
