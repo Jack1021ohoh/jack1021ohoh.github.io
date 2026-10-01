@@ -149,6 +149,10 @@ ul { list-style: none; }
     width: 100%;
 }
 
+.nav-resume {
+    color: var(--accent);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -537,6 +541,28 @@ section { padding: 7rem 0; }
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 1.25rem;
+}
+
+.projects-note {
+    margin-top: 2.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.projects-note a {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-left: 0.5rem;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.projects-note a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .project-card {
