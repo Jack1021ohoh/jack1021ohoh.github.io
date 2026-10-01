@@ -13,7 +13,7 @@ This portfolio website highlights my work in data science, machine learning, and
 - **6 Featured Projects**: From production-ready AI systems to published research
 - **Comprehensive Skills Section**: Technical skills across ML, data engineering, and cloud platforms
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Interactive Contact Form**: Easy way to get in touch
+- **Contact Form**: Front-end only for now — submissions are validated but not sent anywhere
 
 ## 🚀 Featured Projects
 
@@ -33,7 +33,7 @@ This portfolio website highlights my work in data science, machine learning, and
 - Font Awesome Icons
 
 ### Design Features
-- Modern gradient hero section
+- Animated neural-network canvas in the hero section, reacting to the mouse
 - Smooth scrolling navigation
 - Animated project cards
 - Mobile-responsive hamburger menu
