@@ -242,24 +242,24 @@
 
                 <div class="project-card reveal" data-category="sports" style="--delay: 0.16s">
                     <div class="project-header">
-                        <span class="project-badge">Kaggle</span>
-                        <span class="project-domain">Sports Analytics · Ensemble</span>
+                        <span class="project-badge">Statistical Research</span>
+                        <span class="project-domain">Statistical Modeling · Sports Analytics</span>
                     </div>
-                    <h3>MLB Hit Prediction with Swing Data</h3>
-                    <p class="project-description">Predictive modeling system classifying 5 MLB hit outcomes from raw pitch and swing biomechanics across 50,000+ swing records using a two-level stacking ensemble.</p>
+                    <h3>MLB Player Aging Curves with Survivorship Correction</h3>
+                    <p class="project-description">Aging curves for five MLB performance metrics across 45 seasons of FanGraphs data, using GAMs with inverse probability weighting to correct for declining players dropping out of the sample before they retire.</p>
                     <ul class="project-highlights">
-                        <li>Built two-level stacking ensemble of CatBoost and DNN base learners with a logistic regression meta-model, achieving 0.74 AUC</li>
-                        <li>Implemented automatic hyperparameter optimization with Optuna (TPE sampling)</li>
-                        <li>Derived physics-informed features (Magnus effect, swing efficiency) and cross-validated importance via CatBoost and LightGBM</li>
+                        <li>Built GAM aging curves with a logistic survival model for IPW correction, beating the delta method by 8.7% (OPS) and 7.3% (wRC+) in MAE on held-out 2021&ndash;2025 seasons</li>
+                        <li>Validated against simulated leagues with a known true curve, calibrated to 18 real-data moments: GAM beat the delta method on curve shape in 9&ndash;10 of 10 replicates (1.6&ndash;2.5&times; lower shape-based distance)</li>
+                        <li>Found hitting and WAR peak at 27 and quantified the decline schedule (&minus;0.65 WAR from 30 to 34); packaged as a Python library with 103 regression tests</li>
                     </ul>
                     <div class="project-tags">
+                        <span class="tag">GAM</span>
+                        <span class="tag">Survivorship Bias</span>
+                        <span class="tag">Simulation</span>
                         <span class="tag">Sports Analytics</span>
-                        <span class="tag">Ensemble Learning</span>
-                        <span class="tag">CatBoost</span>
-                        <span class="tag">Optuna</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Jack1021ohoh/MLB_Hit_Prediction" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://github.com/Jack1021ohoh/MLB_Position_Player_Aging_Analysis" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
 

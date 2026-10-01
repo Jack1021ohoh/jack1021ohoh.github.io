@@ -17,12 +17,12 @@ This portfolio website highlights my work in data science, machine learning, and
 
 ## 🚀 Featured Projects
 
-1. **Explainable AI for News Integrity** - Production-ready fact-checking system with cloud deployment
-2. **Deepfake Image Detection with XAI** - Computer vision system with explainable AI
-3. **Orchid Double Spike Prediction** - Published research in federated learning (Elsevier, 2026)
-4. **MLB Hit Prediction** - Sports analytics with ensemble learning
-5. **MLB Player Aging Analysis** - Statistical modeling with GAM
-6. **Vehicle Telematics Segmentation** - Industry partnership project with LSTM autoencoders
+1. **Orchid Double Spike Prediction** - Published research in federated learning (Elsevier, 2026)
+2. **Explainable AI for News Integrity** - Production-ready fact-checking system with cloud deployment
+3. **Deepfake Image Detection with XAI** - Computer vision system with explainable AI
+4. **Electricity Load Forecasting** - End-to-end forecasting pipeline with user clustering and six models
+5. **MLB Pitch Outcome Prediction & Sequence Optimization** - Multi-task transformer driving an MCTS pitch sequencer
+6. **MLB Player Aging Curves** - GAM aging curves with survivorship-bias correction and simulation validation
 
 ## 💻 Technologies Used
 

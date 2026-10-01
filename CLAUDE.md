@@ -25,4 +25,4 @@ External dependencies load from CDNs in `<head>`: Google Fonts (Cormorant Garamo
 ## Notes
 
 - Most content edits (swapping or reordering projects) only touch `index.html`.
-- `README.md` contains its own list of featured projects that has fallen behind the site: it still lists Aging Analysis and Telematics, which have been replaced. When projects change, update it to match.
+- `README.md` has its own list of featured projects, in the same order as the cards. When projects change, update it to match.
