@@ -13,7 +13,7 @@ This portfolio website highlights my work in data science, machine learning, and
 - **6 Featured Projects**: From production-ready AI systems to published research
 - **Comprehensive Skills Section**: Technical skills across ML, data engineering, and cloud platforms
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Contact Form**: Front-end only for now — submissions are validated but not sent anywhere
+- **Contact Form**: Sends messages to my inbox through Formspree
 
 ## 🚀 Featured Projects
 

@@ -479,6 +479,10 @@ section { padding: 7rem 0; }
     margin-top: 0.2rem;
 }
 
+.highlight-body .experience-next {
+    margin-top: 0.85rem;
+}
+
 /* ========================================
    Projects
    ======================================== */
@@ -863,6 +867,15 @@ section { padding: 7rem 0; }
     margin-top: 0.25rem;
 }
 
+.contact-form .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: progress;
+}
+
+.form-honeypot {
+    display: none;
+}
+
 #form-status {
     display: none;
     font-family: var(--font-mono);
@@ -870,6 +883,13 @@ section { padding: 7rem 0; }
     padding: 0.85rem 1rem;
     border-radius: 2px;
     border-left: 2px solid transparent;
+}
+
+#form-status.sending {
+    display: block;
+    background: rgba(0, 212, 184, 0.06);
+    border-left-color: var(--accent);
+    color: var(--accent);
 }
 
 #form-status.success {

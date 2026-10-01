@@ -72,7 +72,7 @@
                     <h2 class="section-title">About Me</h2>
                     <p class="lead">I'm a Master's student in Data Science at Columbia University with a passion for leveraging AI to solve real-world problems.</p>
                     <p>Building on my B.B.A. in Management Information Systems from National Sun Yat-sen University (GPA: 3.97/4.0), I've developed expertise in deep learning, machine learning, data mining, and big data analytics.</p>
-                    <p>At Academia Sinica, I applied advanced AI methods in healthcare and agriculture research, working with deep learning frameworks like PyTorch to improve medical imaging analysis and develop innovative solutions for agricultural challenges. These experiences strengthened my technical expertise while honing my skills in problem-solving and interdisciplinary collaboration.</p>
+                    <p>Most recently, as an AI/ML research intern at ASTA Health Tech, I built vital-sign forecasting with calibrated uncertainty bands, distilled a medical QA model into a smaller Qwen3-14B student, and read ECG waveforms from photos of patient monitors. Before that, I built LLM agents at TIFIN that ground financial explanations in live API data, and spent a year at Academia Sinica applying deep learning and federated learning to medical imaging and agriculture.</p>
                     <p>Beyond research, I'm passionate about sports analytics, especially baseball, where I enjoy uncovering insights from data to support decision-making and strategy.</p>
                 </div>
                 <div class="about-highlights">
@@ -88,8 +88,12 @@
                         <div class="highlight-icon"><i class="fas fa-flask"></i></div>
                         <div class="highlight-body">
                             <h4>Experience</h4>
-                            <p>Research Assistant, Academia Sinica</p>
-                            <p class="small">Healthcare &amp; Agriculture AI Research</p>
+                            <p>AI/ML Research Intern, ASTA Health Tech</p>
+                            <p class="small">Jun&ndash;Aug 2026 &middot; Healthcare AI</p>
+                            <p class="experience-next">Data Science Intern, TIFIN</p>
+                            <p class="small">Feb&ndash;May 2026 &middot; LLM agents for finance</p>
+                            <p class="experience-next">Research Assistant, Academia Sinica</p>
+                            <p class="small">Jul 2024&ndash;Jul 2025 &middot; Healthcare &amp; agriculture AI</p>
                         </div>
                     </div>
                     <div class="highlight-item reveal" style="--delay: 0.3s">
@@ -388,13 +392,6 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <a href="tel:+16463585232">(646) 358-5232</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
                         <div>
                             <h4>LinkedIn</h4>
@@ -410,7 +407,8 @@
                     </div>
                 </div>
 
-                <form class="contact-form reveal" id="contact-form" style="--delay: 0.15s">
+                <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="--delay: 0.15s">
+                    <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -428,7 +426,7 @@
                         <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
-                    <div id="form-status"></div>
+                    <div id="form-status" role="status" aria-live="polite"></div>
                 </form>
             </div>
         </div>

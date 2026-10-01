@@ -183,36 +183,37 @@ document.querySelectorAll('.project-card').forEach(card => {
 // ========================================
 // Contact Form
 // ========================================
+// Submissions post to Formspree; the endpoint is the form's `action`.
 const contactForm = document.getElementById('contact-form');
 const formStatus  = document.getElementById('form-status');
+const submitBtn   = contactForm.querySelector('button[type="submit"]');
+
+function setFormStatus(state, text) {
+    formStatus.className   = state;
+    formStatus.textContent = text;
+}
 
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-
-    const formData = {
-        name:    document.getElementById('name').value,
-        email:   document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value,
-    };
-
-    formStatus.className   = '';
-    formStatus.style.display = 'block';
-    formStatus.textContent = '// Sending...';
-    formStatus.style.background     = 'rgba(0,212,184,0.06)';
-    formStatus.style.color          = 'var(--accent)';
-    formStatus.style.borderLeft     = '2px solid var(--accent)';
+    setFormStatus('sending', '// Sending...');
+    submitBtn.disabled = true;
 
     try {
-        await new Promise(resolve => setTimeout(resolve, 1200));
-        console.log('Form data:', formData);
-        formStatus.className   = 'success';
-        formStatus.textContent = '// Message sent — I\'ll be in touch soon.';
+        const res = await fetch(contactForm.action, {
+            method:  'POST',
+            body:    new FormData(contactForm),
+            headers: { Accept: 'application/json' },
+        });
+        if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
+
+        setFormStatus('success', '// Message sent — I\'ll be in touch soon.');
         contactForm.reset();
-        setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
+        contactForm.querySelectorAll('input, textarea').forEach(el => { el.style.borderColor = ''; });
+        setTimeout(() => setFormStatus('', ''), 5000);
     } catch {
-        formStatus.className   = 'error';
-        formStatus.textContent = '// Something went wrong. Email me directly at lc4021@columbia.edu';
+        setFormStatus('error', '// Your message wasn\'t sent. Email me directly at lc4021@columbia.edu');
+    } finally {
+        submitBtn.disabled = false;
     }
 });
 
